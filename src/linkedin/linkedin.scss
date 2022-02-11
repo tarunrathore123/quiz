@@ -1,0 +1,44 @@
+.linkedin {
+  width: 80%;
+  margin: auto;
+  .header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 10px 0;
+    // justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    .header__left {
+      display: flex;
+      flex: 1;
+      //   padding-left: 10%;
+      align-items: center;
+      //   justify-content: flex-start;
+      object-fit: contain;
+
+      img {
+        height: 25px;
+      }
+      input {
+        border: none;
+        outline: none;
+        background-color: #eef3f8;
+        padding: 4px 10px;
+        border-radius: 5px;
+        font-size: 15px;
+        margin: 10px;
+      }
+    }
+    .header__right {
+      display: flex;
+
+      flex: 1;
+      align-items: center;
+      justify-content: space-around;
+      .iconWithText {
+        padding-right: 10px;
+      }
+    }
+  }
+}
