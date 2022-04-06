@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sudoku solver
 
 This app solves sudoku with this algorithms
@@ -22,3 +23,7 @@ This app solves sudoku with this algorithms
 ## More info
 
 App ui is made with [ReactJS](https://github.com/facebook/react/) but algorithms are in prue javascript you can find them on `src/algorithms`
+=======
+# Quiz
+
+>>>>>>> da39a17fd2d2927fd84c6da6fa9d5e723720cada
