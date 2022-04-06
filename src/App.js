@@ -6,7 +6,13 @@ import Carousel from "./slick-carousel/carousel";
 import NormalCarousel from "./slick-carousel/normal-carousel";
 import W3SchoolCarousel from "./slick-carousel/w3-school-carousel";
 import Linkedin from "./linkedin/linkedin";
-import Counter from "./counter/counter";
+import Counter from "./counter/Counter";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Calculator from "./calculator/calculator";
+import Docs from "./docs/docs";
+import Quiz from "./quiz/quiz";
+import Question from "./quiz/question";
+import Score from "./quiz/score";
 
 const App = () => {
   const [carousel, setCarousel] = useState(true);
@@ -31,41 +37,21 @@ const App = () => {
   const [counter, setCounter] = useState(true);
 
   return (
-    <div>
-      {/* {counter && <Counter />} */}
-      {linkedin && <Linkedin />}
-
-      {/* {carousel && <W3SchoolCarousel />}
-      <Header
-        isSolving={isSolving}
-        setIsLoadingFile={setIsLoadingFile}
-        isLoadingFile={isLoadingFile}
-        isSolved={isSolved}
-      />
-      {isSolving ? (
-        <Solver
-          setIsSolving={setIsSolving}
-          setIsSolved={setIsSolved}
-          boardData={boardData}
-          setBoarData={setBoardData}
-          algorithm={algorithm}
-        />
-      ) : (
-        <IOScreen
-          setIsSolving={setIsSolving}
-          isLoadingFile={isLoadingFile}
-          setLoadFromFileInput={setLoadFromFileInput}
-          loadFromFileInput={loadFromFileInput}
-          setBoardData={setBoardData}
-          setIsLoadingFile={setIsLoadingFile}
-          boardData={boardData}
-          setSetting={setSetting}
-          isSolved={isSolved}
-          setting={setting}
-          setAlgorithm={setAlgorithm}
-        />
-      )} */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* <Route exact path="/" element={<Linkedin />}></Route> */}
+        {/* <Route exact path="/calculator" element={<Calculator />}></Route> */}
+        {/* <Route exact path="/docs" element={<Docs />}></Route> */}
+        <Route exact path="/quiz" element={<Quiz />}></Route>
+        <Route exact path="/question" element={<Question />}></Route>
+        <Route exact path="/score" element={<Score />}></Route>
+        {/* <Route path="/users"><Users /></Route> */}
+        <Route path="*" element={<Quiz />} />
+        {/* <Route path="/">
+          <Home />
+        </Route> */}
+      </Routes>
+    </BrowserRouter>
   );
 };
 
